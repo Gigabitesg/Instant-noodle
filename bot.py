@@ -12,7 +12,9 @@ logger = logging.getLogger(__name__)
 
 def run_start(update, callback):
     chat_id = update.message.chat.id  # get user's chat id
-    bot.send_message(chat_id, 'You pressed start!')
+    keyboard = ReplyKeyboardMarkup(
+        [['dry noodle'], ['soup noodle']], resize_keyboard=True)
+    bot.send_message(chat_id, 'What nOoDlE YoU WAnt', reply_markup=keyboard)
 
 
 def echo(update, callback):
