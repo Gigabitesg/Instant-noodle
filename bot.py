@@ -1,4 +1,5 @@
 import logging
+from multiprocessing import context
 from pickle import POP_MARK
 from telegram import Bot, Update, ReplyKeyboardMarkup
 from telegram.ext import CommandHandler, MessageHandler, Updater, Filters
@@ -25,6 +26,7 @@ def dry_noodle(update, poduct):
                      '''1. Indomee
 2. jajeongman
 3. Mee_pok''', reply_markup=keyboard)
+    return echo(update,context)
 
 
 def soup_noodle(update,product):
@@ -35,7 +37,8 @@ def soup_noodle(update,product):
                      '''1. Roasted sesame
  2. Curry Maggi
  3. Chicken noodle''', reply_markup=keyboard)
-
+    return echo(update,context)
+    
 def echo(update, callback):
     chat_id = update.message.chat.id
     text = update.message.text  # get whatever text the user sent
