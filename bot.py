@@ -57,8 +57,9 @@ def main() -> None:
     dispatcher = updater.dispatcher
     # add handlers, which dictates how your bot would handle different inputs
     dispatcher.add_handler(CommandHandler('start', run_start))
-    dispatcher.add_handler(MessageHandler(
-        Filters.regex('dry noodle'), dry_noodle))
+    dispatcher.add_handler(MessageHandler(Filters.regex('dry noodle'), dry_noodle))
+    dispatcher.add_handler(MessageHandler(Filters.regex('soup noodle'), soup_noodle))
+
     dispatcher.add_handler(MessageHandler(
         Filters.text & ~Filters.command, echo))
 
