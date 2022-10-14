@@ -19,12 +19,12 @@ def run_start(update, callback):
 
 def dry_noodle(update, poduct):
     chat_id = update.message.chat.id
-    bot.send_message(chat_id, 'goood choice'),
+    keyboard = ReplyKeyboardMarkup(['1', '2', '3'])
+    bot.send_message(chat_id, 'goood choice')
     bot.send_message(chat_id,
                      '''1. Indomee
 2. jajeongman
-3. Mee_pok''',reply_markup=keyboard)
-    keyboard = ReplyKeyboardMarkup(['1', '2', '3'])
+3. Mee_pok''', reply_markup=keyboard)
 
 
 def soup_noodle(update,product):
@@ -33,7 +33,7 @@ def soup_noodle(update,product):
     bot.send_message(chat_id,
                      '''1. Roasted sesame
  2. Curry Maggi
- 3. Chicken noodle''',reply_markup=keyboard)
+ 3. Chicken noodle''', reply_markup=keyboard)
     keyboard = ReplyKeyboardMarkup(['1', '2', '3'])
 
 def echo(update, callback):
