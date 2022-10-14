@@ -17,22 +17,33 @@ def run_start(update, callback):
     bot.send_message(chat_id, 'What nOoDlE YoU WAnt', reply_markup=keyboard)
 
 
+def dry_noodle(update, poduct):
+    chat_id = update.message.chat.id
+    bot.send_message(chat_id, 'goood choice')
+    bot.send_message(chat_id,
+                     '''1. Indomee
+2. jajeongman
+3. Mee_pok''',reply_markup=keyboard)
+    keyboard = ReplyKeyboardMarkup(['1', '2', '3'])
+
+
+def soup_noodle(update,product):
+    chat_id = update.message.chat.id
+    bot.send_message(chat_id, 'heathier choicee')
+    bot.send_message(chat_id,
+                     '''1. Roasted sesame
+ 2. Curry Maggi
+ 3. Chicken noodle''',reply_markup=keyboard)
+    keyboard = ReplyKeyboardMarkup(['1', '2', '3'])
+
 def echo(update, callback):
     chat_id = update.message.chat.id
     text = update.message.text  # get whatever text the user sent
     keyboard = ReplyKeyboardMarkup(
-        [['dry noodle'], ['soup noodle']], resize_keyboard=True)
-    bot.send_message(chat_id, 'What nOoDlE YoU WAnt', reply_markup=keyboard)
+        [['cook it'], ['I go home cook']], resize_keyboard=True)
+    bot.send_message(chat_id, 'heres your noodle', reply_markup=keyboard)
 
 
-def dry_noodle(update, poduct):
-    chat_id = update.message.chat.id
-    bot.send_message(chat_id,
-                     '''1. Indomee
-2. jajeongman
-3. Mee_pok''')
-    keyboard = ReplyKeyboardMarkup(['1', '2', '3'])
-    bot.send_message(chat_id, 'goood choice', reply_markup=keyboard)
 
 
 def main() -> None:
