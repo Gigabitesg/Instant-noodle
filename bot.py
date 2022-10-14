@@ -29,12 +29,12 @@ def dry_noodle(update, poduct):
 
 def soup_noodle(update,product):
     chat_id = update.message.chat.id
-    bot.send_message(chat_id, 'heathier choicee'),
+    keyboard = ReplyKeyboardMarkup(['1', '2', '3'])
+    bot.send_message(chat_id, 'heathier choicee')
     bot.send_message(chat_id,
                      '''1. Roasted sesame
  2. Curry Maggi
  3. Chicken noodle''', reply_markup=keyboard)
-    keyboard = ReplyKeyboardMarkup(['1', '2', '3'])
 
 def echo(update, callback):
     chat_id = update.message.chat.id
@@ -43,8 +43,11 @@ def echo(update, callback):
         [['cook it'], ['I go home cook']], resize_keyboard=True)
     bot.send_message(chat_id, 'heres your noodle', reply_markup=keyboard)
 
-
-
+def echo(update, callback):
+    chat_id = update.message.chat.id
+    text = 'cook it'
+    keyboard = ReplyKeyboardMarkup(
+        [['gulu gulu water'], ['ask my bf cook']], resize_keyboard=True)
 
 def main() -> None:
     updater = Updater(TOKEN)
