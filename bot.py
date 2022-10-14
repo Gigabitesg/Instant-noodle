@@ -19,7 +19,7 @@ def run_start(update, callback):
 
 def dry_noodle(update, poduct):
     chat_id = update.message.chat.id
-    bot.send_message(chat_id, 'goood choice')
+    bot.send_message(chat_id, 'goood choice'),
     bot.send_message(chat_id,
                      '''1. Indomee
 2. jajeongman
@@ -29,7 +29,7 @@ def dry_noodle(update, poduct):
 
 def soup_noodle(update,product):
     chat_id = update.message.chat.id
-    bot.send_message(chat_id, 'heathier choicee')
+    bot.send_message(chat_id, 'heathier choicee'),
     bot.send_message(chat_id,
                      '''1. Roasted sesame
  2. Curry Maggi
